@@ -7,5 +7,5 @@
 
 
 <h2>{{ $titulo }}</h2>
-
+    <img class="banner" src="/image/books.jpg" alt="banner">
 @endsection

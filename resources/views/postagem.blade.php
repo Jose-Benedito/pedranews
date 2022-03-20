@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'BTNH- Home')
+@section('title', 'BTNH- Postagem')
 
 @section('content')
 

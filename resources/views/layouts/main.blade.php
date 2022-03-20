@@ -14,8 +14,8 @@
 
      </head>
     <body>
-        <img class="banner" src="/image/books.jpg" alt="banner"/>
         <!-- Diretiva do laravel -->
+{{-- ADICIONAS O S INCLUDES PARA AS PÁGINAS --}}
         @yield('content')
 
         <footer>

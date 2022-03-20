@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.main')
 
-        <title>Laravel</title>
+@section('title', 'BNTH - Sobre')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    </head>
-    <body >
-     {{-- Este é o a formar de comentar com Blade --}}
-        <h1>{{ $titulo }}</h1>
+@section('content')
+
+{{-- Este é o a formar de comentar com Blade --}}
+
+        <h2>{{ $titulo }}</h2>
      {{-- interações com diretivas do Blade --}}
     {{-- usando if, elseif e else --}}
         @if(10 > 5)
@@ -43,5 +38,5 @@
             $name = "João";
             echo $name;
         @endphp
-    </body>
-</html>
+
+@endsection
