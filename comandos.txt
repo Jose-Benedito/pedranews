@@ -1,0 +1,4 @@
+ PARA RODAR O SERVIDOR 
+
+ $ php artisan serve //rodar o sevidor do laravel ( via  terminal)
+
