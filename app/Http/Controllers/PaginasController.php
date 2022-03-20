@@ -14,8 +14,20 @@ class PaginasController extends Controller
 
     }
     public function sobre(){
+        $nome = "João Carlos";
+        $idade = 34;
         $titulo = "Página sobre do Blog";
-        return view('sobre', ['titulo'=>$titulo]);
+
+        $array = [10, 123, 45, 58];
+        $pessoas = ["Pamela", "Beatriz", "Ronaldo", "Isaura"];
+        return view('sobre',
+            [
+                'titulo'=>$titulo,
+                'nome'=>$nome,
+                'idade'=>$idade,
+                'array'=>$array,
+                'pessoas'=>$pessoas
+            ]);
 
     }
     public function postagem(){
