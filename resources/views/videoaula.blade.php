@@ -6,15 +6,17 @@
     <h2>{{ $titulo }}</h2>
     <img src="/image/slide3.jpg" class="img-fluid mb-5" alt="slide3.jpg">
     <div class="container md-12">
-        <h4 class="text-center">Título do vídeo</h4>
+      @foreach($videos as $video)
+        <h4 class="text-left">{{ $video->title }}</h4>
+        <p>{{ $video->data_post }}</p>
         <div class="embed-responsive embed-responsive-16by9 d-flex justify-content-center">
-          <iframe class="embed-responsive-item w-50  " style="height:250px;" src="https://mega.nz/embed/cQkFyICK#yjT1NsWF5VICeEFQ6sSpmTrQZ9lmqa7h_o887lzjIzs" allowfullscreen></iframe>
+          <iframe class="embed-responsive-item w-50 m-3 col-8" style="height:250px;" src= {{ $video->url }} allowfullscreen></iframe>
 
-
+          <p class="card col-3 text-left p-3">{{ $video->description }}</P>
         </div>
-        <p class="text-center">Descrição do vídeo</p>
-        <p class=text-center">Postado em 09 Abril de 2022</p>
+        
     </div>
+    @endforeach
     <div class="row">
         <div class="col-4 ">
              <div class="card" style="width: 18rem; margin-top:20px;">
@@ -47,7 +49,5 @@
             </div> 
         </div>
 </div>
-@if($id != null)
-         <p> Exibindo postagens id: {{ $id }}</p>
-    @endif
+
 @endsection

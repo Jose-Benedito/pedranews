@@ -36,7 +36,7 @@
                      <a href="postagem" class="nav-link">Postagem</a>
                     </li>
                     <li class="nav-item">
-                     <a href="postagens" class="nav-link">Videoaulas</a>
+                     <a href="videoaula" class="nav-link">Videoaulas</a>
                     </li>
 
                 </ul>
