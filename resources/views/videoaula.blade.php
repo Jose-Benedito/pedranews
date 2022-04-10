@@ -18,8 +18,8 @@
     </div>
     @endforeach
     <div class="row">
-        <div class="col-4 ">
-             <div class="card" style="width: 18rem; margin-top:20px;">
+        <div class="col-4">
+             <div class="card " style="width: 18rem; margin-top:20px;">
               <img src="/image/escrita2.jpg" class="card-img-top" alt="escrita2">
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -28,7 +28,7 @@
               </div>
             </div>
     </div>
-        <div class="col-4">
+        <div class="col-4 ">
              <div class="card" style="width: 18rem; margin-top:20px;">
               <img src="/image/escrita1.jpg" class="card-img-top" alt="escrita1">
               <div class="card-body">

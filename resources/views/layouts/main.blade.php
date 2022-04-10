@@ -19,7 +19,7 @@
 
      </head>
     <body>
-        <div class="container md-10 sm-4">
+        <div class="container md-10 sm-4 ">
         <header>
             <nav class="navbar navbar-expand-lg navbar-light">
             <div class="cpllapse navbar-collapse" id="navbar">
@@ -38,6 +38,10 @@
                     <li class="nav-item">
                      <a href="videoaula" class="nav-link">Videoaulas</a>
                     </li>
+                    <li class="nav-item">
+                     <a href="videopost" class="nav-link">Videopost</a>
+                    </li>
+
 
                 </ul>
             </div>

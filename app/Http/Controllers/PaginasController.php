@@ -11,7 +11,7 @@ class PaginasController extends Controller
     public function index() {
 
         $artigos = Artigo::all(); // trazendo todos os dados da TABELA Artigo;
-        $titulo = "Página inicial do Beneblog";
+        $titulo = "Beneblog";
         return view('home', ['titulo'=>$titulo, 'artigos'=>$artigos]);
 
 
@@ -19,7 +19,7 @@ class PaginasController extends Controller
     public function sobre(){
         $nome = "João Carlos";
         $idade = 34;
-        $titulo = "Página sobre do Blog";
+        $titulo = "Sobre mim";
 
         $array = [10, 123, 45, 58];
         $pessoas = ["Pamela", "Beatriz", "Ronaldo", "Isaura"];
@@ -40,8 +40,14 @@ class PaginasController extends Controller
     }
     public function videoaula(){
         $videos = Videoaula::all();
-        $titulo = "Páginas das videoaulas";
+        $titulo = "Videoaulas";
         return view('videoaula', ['titulo'=>$titulo, 'videos'=>$videos]);
+    
+    }
+    public function videopost(){
+        
+        $titulo = "Postagem de videos";
+        return view('videopost', ['titulo'=>$titulo]);
     
     }
   public function postagens($id=null){
@@ -49,6 +55,29 @@ class PaginasController extends Controller
       return view('postagens', ['titulo'=>$titulo, 'id' => $id]);
  
   }
+  public function store(Request $request){
+      $post = new Artigo;
+
+      $post->title = $request->title;
+      $post->description = $request->description;
+      $post->data_post = $request->data_post;
+
+      $post->save();
+
+      return redirect('/');
+  }
+  public function store_video(Request $request){
+    $post = new Videoaula;
+
+    $post->title = $request->title;
+    $post->url = $request->url;
+    $post->description = $request->description;
+    $post->data_post = $request->data_post;
+
+    $post->save();
+
+    return redirect('videoaula');
+}
 
 
 }

@@ -6,7 +6,7 @@
 @section('content')
 
 
-<h2>{{ $titulo }}</h2>
+<h1>{{ $titulo }}</h1>
 
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner">
@@ -33,19 +33,21 @@
 <!-- Postagens -->
 <div class="container">
   <div class="row m-5">
-  <div class="col-8">
+  <div class="col-10">
     <img src="/image/foto.jpeg" alt="foto do autor" class="rounded-circle m-5">
 
 
-  @foreach($artigos as $artigo)
-    <h6>Por: José Benedito Medeiros</h6>
+    @foreach($artigos as $artigo)
+    <h5>Por: José Benedito Medeiros</h5>
     <h3>{{ $artigo->title }}</h3>
-    <p>{{ $artigo->description }}</p>
-    <p>{{ $artigo->data_post }}
+    
+    {!! $artigo->description !!}
+    
+    <p>{{ $artigo->data_post }}</p>
   @endforeach
 
   </div>
-  <div class="col-4  bg-secondary">
+  <div class="col-2  bg-secondary">
     <h6>Postagens anteriores</h6>
     <a href="#">Postagens 2</a>
     <a href="#">Postagens 3</a>

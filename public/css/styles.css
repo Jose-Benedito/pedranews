@@ -8,5 +8,25 @@
 }
 
 h2{
- color: blue;
+ color: rgb(118, 118, 163);
+}
+h1{
+  color: rgb(118, 118, 163);
+ }
+body{
+  background-color: #faebd7;
+}
+/* navebar */
+.navbar {
+  justify-content: space-between;
+  color: #eed8bc;
+  padding: 5px 0;
+}
+/* botão dos cards */
+.btn-primary {
+  background-color: #F2A340;
+  border-color: #C28008;
+}
+.btn-primary:hover {
+  background-color: #C28008;
 }
