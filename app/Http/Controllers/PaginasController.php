@@ -32,14 +32,19 @@ class PaginasController extends Controller
     }
     public function postagem(){
         $titulo = "Páginas das postagens";
-        return view('postagem', ['titulo'=>$titulo]);
+        $busca = request('search');
+        return view('postagem', ['titulo'=>$titulo, 'busca'=>$busca]);
     }
     public function videoaula(){
         $titulo = "Páginas das videoaulas";
         return view('videoaula', ['titulo'=>$titulo]);
     
     }
+  public function postagens($id=null){
+      $titulo = "Página das Postagens";
+      return view('postagens', ['titulo'=>$titulo, 'id' => $id]);
+ 
+  }
 
 
 }
-
