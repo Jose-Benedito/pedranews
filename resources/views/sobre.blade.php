@@ -8,7 +8,7 @@
 
         <h2>{{ $titulo }}</h2>
 
-<img src="/image/desktop-sobrenos.jpeg" class="img-fluid" alt="escrita">
+<img src="/image/desktop-sobrenos.jpeg" class="d-block w-100" alt="escrita">
 
 <!-- Postagens -->
 <div class="container">

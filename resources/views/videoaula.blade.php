@@ -4,7 +4,7 @@
 
 @section('content')
     <h2>{{ $titulo }}</h2>
-    <img src="/image/slide3.jpg" class="img-fluid mb-5" alt="slide3.jpg">
+    <img src="/image/slide3.jpg" class="d-block w-100 mb-5" alt="slide3.jpg">
     <div class="container md-12">
       @foreach($videos as $video)
         <h4 class="text-left">{{ $video->title }}</h4>
