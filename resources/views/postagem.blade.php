@@ -3,7 +3,7 @@
 @section('title', 'BTNH- Postagem')
 
 @section('content')
-
+<div class="container col-lg-10 col-sm-4">
 
 <h2>{{ $titulo }}</h2>
 <img src="/image/desktop-cadastro.jpeg" class="img-fluid mb-5" alt="...">
@@ -60,6 +60,6 @@
 
 </form>
 </div>
-
+</div>
 @endsection
 
