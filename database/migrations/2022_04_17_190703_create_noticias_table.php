@@ -13,14 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('videoaulas', function (Blueprint $table) {
+        Schema::create('noticias', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-            $table->string("title");
-            $table->string("url");
-            $table->text("description");
-            $table->string("data_post");
+            $table->string('title');
+            $table->string('subtitle');
+            $table->text('body');
+            $table->string('foto',100);
+            $table->string('foto_desc',100);
+            $table->string('data_post',100);
 
+            $table->timestamps();
         });
     }
 
@@ -31,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('videoaulas');
+        Schema::dropIfExists('noticias');
     }
 };
