@@ -6,37 +6,15 @@
 @section('content')
 
 
-<h1>{{ $titulo }}</h1>
 
-    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="/image/slide1.jpg" class="d-block w-100" alt="slide1">
-    </div>
-    <div class="carousel-item">
-      <img src="/image/slide2.jpg" class="d-block w-100" alt="slide2">
-    </div>
-    <div class="carousel-item">
-      <img src="/image/slide3.jpg" class="d-block w-100" alt="slide3">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+
 
 <!-- Postagens -->
-<div class="container">
-  <div class="row m-5">
-  <div class="col-10">
-    <img src="/image/foto.jpeg" alt="foto do autor" class="rounded-circle m-5">
 
-
+  
+<!--    <img src="/image/foto.jpeg" alt="foto do autor" class="rounded-circle m-5">
+<div class="row">
+  <div class="col-lg-8 col-md-4">
     @foreach($artigos as $artigo)
     <h5>Por: José Benedito Medeiros</h5>
     <h3>{{ $artigo->title }}</h3>
@@ -44,21 +22,88 @@
     {!! $artigo->description !!}
     
     <p>{{ $artigo->data_post }}</p>
-  @endforeach
-
+    @endforeach
+    
+    
+    
+    {!!$artigos->links()!!}
   </div>
-  <div class="col-2  bg-secondary">
-    <h6>Postagens anteriores</h6>
-    <a href="#">Postagens 2</a>
-    <a href="#">Postagens 3</a>
-    <a href="#">Postagens 4</a>
-    <a href="#">Postagens 5>
-    <a href="#">Postagens 6</a>
-    <a href="#">Postagens 7</a>
+</div> -->
+
+  <div class="container col-lg-10">
+  <div class="card " style="width:45rem ; margin-bottom:0px;">
+      <a href=""><div class="card-body d-flex justify-content-start">
+       <img src="/image/escrita2.jpg"  style="width:250px ; margin:20px;" class="card-img-top" alt="escrita2">
+          <h1 class="card-title">7° Série fooorkkemmem jhsggabbbbs nnhe</h1>   
+        </div>
+      </a>           
+  </div>
+  @for($i=0;$i< 3;$i++)
+
+    <div class="row ">
+        <div class="col-lg-2 noticia">
+             <div class="card">
+             <a href="#" >  <img src="/image/escrita2.jpg" class="card-img-top" alt="escrita2">
+              <div class="card-body">
+                <h5 class="card-title">7° Série</h5>
+                <p class="card-text">Algumas videoaulas gravadas sobre a apostila Aprender Sempre,
+                   para complementar os estudos destinados as turmas da 7° série.</p>
+               
+              </div>
+            </a>
+            </div>
+            
+          </div>
+
+          <div class="col-lg-2 noticia">
+          <div class="card ">
+           <a href="#" ><img src="/image/escrita2.jpg" class="card-img-top" alt="escrita2">
+              <div class="card-body">
+                <h5 class="card-title">7° Série</h5>
+                <p class="card-text">Algumas videoaulas gravadas sobre a apostila Aprender Sempre,
+                   para complementar os estudos destinados as turmas da 7° série.</p>
+                
+              </div>
+            </a>
+          </div>
+            
+          </div>
+          <div class="col-lg-2 noticia">
+             <div class="card ">
+             <a href="#" ><img src="/image/escrita2.jpg" class="card-img-top" alt="escrita2">
+              <div class="card-body">
+                <h5 class="card-title">7° Série</h5>
+                <p class="card-text">Algumas videoaulas gravadas sobre a apostila Aprender Sempre,
+                   para complementar os estudos destinados as turmas da 7° série.</p>
+          
+              </div>
+             </a>
+            </div>
+            
+          </div>
+ 
+
+          
+            <div class="card aside" style="width:25rem ; margin-top:20px;">
+              <div class="card-body">
+              <a href="#" ><img src="/image/escrita2.jpg" class="card-img-top" alt="escrita2">
+                <h5 class="card-title">7° Série</h5>
+                <p class="card-text">Algumas videoaulas gravadas sobre a apostila Aprender Sempre,
+                  para complementar os estudos destinados as turmas da 7° série.</p>
+                  
+                </div>
+              </a>
+              </div>
+              
+    </div>
+  @endfor
+  <div class="card " style="width:45rem ; margin-bottom:0px;">
+      <a href=""><div class="card-body d-flex justify-content-start">
+       <img src="/image/escrita2.jpg"  style="width:250px ; margin:20px;" class="card-img-top" alt="escrita2">
+          <h1 class="card-title">7° Série fooorkkemmem jhsggabbbbs nnhe</h1>   
+        </div>
+      </a>           
   </div>
 </div>
-
 </div>
-
-
 @endsection

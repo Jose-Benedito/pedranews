@@ -12,16 +12,18 @@
 
 <!-- Postagens -->
 <div class="container">
-  <div class="row m-5">
-  <div class="col-8">
     <img src="/image/foto.jpeg" alt="foto do autor" class="rounded-circle m-5">
+  <div class="row">
+  <div class="col-lg-12 col-md-4">
 
     <h6>Por: José Benedito Medeiros</h6>
     <h3>Benethowen</h3>
-    <p >Sou professor de Língua Portuguesa graduado em Letras, com pós em linguística e gramática na Universidade Nove de Julho. Atuo na rede de ensino do Estado de São Paulo. Além de portuguẽs, sou licenciado em música pela Faculdade Integrada Cantareira.
+    <p>Sou professor de Língua Portuguesa graduado em Letras, 
+        com pós em linguística e gramática na Universidade Nove de Julho.</p>
+    <p> Atuo na rede de ensino do Estado de São Paulo. Além de portuguẽs, sou licenciado em música pela Faculdade Integrada Cantareira.</p>
 
   </div>
-  <div class="col-4  bg-secondary">
+  <div class="col-12 col-md-4 bg-secondary">
     <h6>Postagens anteriores</h6>
     <a href="#">Postagens 2</a>
     <a href="#">Postagens 3</a>
@@ -31,7 +33,8 @@
     <a href="#">Postagens 7</a>
   </div>
 </div>
-     {{-- interações com diretivas do Blade --}}
+</div>
+ <!--    {{-- interações com diretivas do Blade --}}
     {{-- usando if, elseif e else --}}
         @if(10 > 5)
             <p>A condição é true</p>
@@ -62,5 +65,5 @@
             $name = "João";
             echo $name;
         @endphp
-
+-->
 @endsection

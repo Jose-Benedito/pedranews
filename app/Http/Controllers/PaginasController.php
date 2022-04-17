@@ -10,8 +10,8 @@ class PaginasController extends Controller
 {
     public function index() {
 
-        $artigos = Artigo::all(); // trazendo todos os dados da TABELA Artigo;
-        $titulo = "Beneblog";
+        $artigos = Artigo::latest()->simplePaginate(2); // trazendo os últimos dados da TABELA Artigo;
+        $titulo = "Pedra News";
         return view('home', ['titulo'=>$titulo, 'artigos'=>$artigos]);
 
 
@@ -39,7 +39,7 @@ class PaginasController extends Controller
         return view('postagem', ['titulo'=>$titulo, 'busca'=>$busca]);
     }
     public function videoaula(){
-        $videos = Videoaula::all();
+        $videos = Videoaula::latest()->paginate(10);
         $titulo = "Videoaulas";
         return view('videoaula', ['titulo'=>$titulo, 'videos'=>$videos]);
     

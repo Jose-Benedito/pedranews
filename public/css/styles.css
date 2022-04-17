@@ -13,14 +13,12 @@ h2{
 h1{
   color: rgb(118, 118, 163);
  }
-body{
-  background-color: #faebd7;
-}
+
 /* navebar */
 .navbar {
   justify-content: space-between;
-  color: #eed8bc;
-  padding: 5px 0;
+  padding: 20px ;
+  height: 50px;
 }
 /* botão dos cards */
 .btn-primary {
@@ -29,4 +27,21 @@ body{
 }
 .btn-primary:hover {
   background-color: #C28008;
+}
+.noticia{
+  border-bottom: 2px solid #C28008;
+  margin-top:20px;
+  width: 15rem;
+}
+.aside{
+  margin-left:10px;
+  padding: 8px;
+}
+.card-text{
+  padding-right: 20px;
+}
+.nav {
+  border-top: 2px solid #0f0f0c;
+  border-bottom: 0.5px solid #3d3d37;
+  margin-bottom: 80px;
 }
