@@ -56,3 +56,6 @@ h1{
 .card a:hover{
   color:#e950b6;
 }
+.logo a{
+  text-decoration:none;
+}

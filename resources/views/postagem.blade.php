@@ -29,8 +29,8 @@
         
     </div>
     <div class="form-group">
-        <label for="foto">Fotorreportagem:</label>
-        <input type="file" class="form-control" id="foto" name="foto" >
+        <label for="image">Fotorreportagem:</label>
+        <input type="file" class="form-control" id="image" name="image" >
         
     </div>
     <div class="form-group">

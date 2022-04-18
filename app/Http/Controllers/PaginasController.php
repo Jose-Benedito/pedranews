@@ -11,8 +11,9 @@ class PaginasController extends Controller
     public function index() {
 
         $noticias = Noticia::latest()->simplePaginate(3); // trazendo os últimos dados da TABELA Artigo;
+        $manchetes = Noticia::first()->simplePaginate(1);
         $titulo = "Pedra News";
-        return view('home', ['titulo'=>$titulo, 'noticias'=>$noticias]);
+        return view('home', ['titulo'=>$titulo, 'noticias'=>$noticias, 'manchetes'=>$manchetes]);
 
 
     }
@@ -46,13 +47,23 @@ class PaginasController extends Controller
     } */
     public function videopost(){
         
+      
         $titulo = "Postagem de videos";
         return view('videopost', ['titulo'=>$titulo]);
     
     }
+    public function noticia(){
+        
+      
+        $titulo = "Postagem de videos";
+        return view('noticia', ['titulo'=>$titulo]);
+    
+    }
   public function noticias($id=null){
+    $noticias = Noticia::select('select * from users where active = ?', [$id]);// trazendo os últimos dados da TABELA Artigo;
+       
       $titulo = "Página das Postagens";
-      return view('noticias', ['titulo'=>$titulo, 'id' => $id]);
+      return view('noticia', ['titulo'=>$titulo, 'noticias' => $noticias]);
  
   }
   public function store(Request $request){
@@ -61,17 +72,19 @@ class PaginasController extends Controller
       $post->title = $request->title;
       $post->subtitle = $request->subtitle;
       $post->body = $request->body;
-      $post->data_post = $request->data_post;
-    
-      $post->foto_desc = $request->foto_desc;
 
+     // $image = $request->image;
       //uplod da foto(imagem)
-      if($request->hasFile('foto')&& $request->file('foto')->isValid()){
-          $requestImage = $request->foto;
-          $extension = $requestImage->extension();
-          $imageName = md5($requestImage->foto->getClientOriginalName().strtotime("now"));
-          $request->foto->move(public_path('img/fotos'));
+      if($request->hasFile('image')&& $request->file('image')->isValid()){
+
+         $imagePath = $request->image->store('fotos', 'public');
+
+          $post->image = $imagePath; 
       }
+      
+      $post->foto_desc = $request->foto_desc;
+      $post->data_post = $request->data_post;
+
 
       $post->save();
 

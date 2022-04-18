@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('subtitle');
             $table->text('body');
-            $table->string('foto',100);
+            $table->string('image',100);
             $table->string('foto_desc',100);
             $table->string('data_post',100);
 

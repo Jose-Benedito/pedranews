@@ -30,7 +30,7 @@
 
             </nav>
     <div class="container col-lg-10">
-                <div class="col-lg-2 py-5">  <h1>PedraNews</h1></div>
+                <div class="col-lg-2 py-5 logo">  <a href="noticia"><h1>PedraNews</h1></a></div>
                 <ul class="nav justify-content-center ">
                     <li class="nav-item">
                 
