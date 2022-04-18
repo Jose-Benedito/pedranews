@@ -38,10 +38,21 @@ h1{
   padding: 8px;
 }
 .card-text{
+
   padding-right: 20px;
 }
 .nav {
   border-top: 2px solid #0f0f0c;
   border-bottom: 0.5px solid #3d3d37;
   margin-bottom: 80px;
+}
+.corpo{
+  height: 400px;
+}
+
+.card a{
+  text-decoration:none;
+}
+.card a:hover{
+  color:#e950b6;
 }

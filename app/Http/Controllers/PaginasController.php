@@ -4,15 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Artigo; //carregando o model de artigo
-use App\Models\Videoaula; //carregando a model de Videoaula
+use App\Models\Noticia; //carregando a model de Videoaula
 class PaginasController extends Controller
 
 {
     public function index() {
 
-        $artigos = Artigo::latest()->simplePaginate(2); // trazendo os últimos dados da TABELA Artigo;
+        $noticias = Noticia::latest()->simplePaginate(3); // trazendo os últimos dados da TABELA Artigo;
         $titulo = "Pedra News";
-        return view('home', ['titulo'=>$titulo, 'artigos'=>$artigos]);
+        return view('home', ['titulo'=>$titulo, 'noticias'=>$noticias]);
 
 
     }
@@ -38,36 +38,47 @@ class PaginasController extends Controller
         $busca = request('search');
         return view('postagem', ['titulo'=>$titulo, 'busca'=>$busca]);
     }
-    public function videoaula(){
+  /*  public function videoaula(){
         $videos = Videoaula::latest()->paginate(10);
         $titulo = "Videoaulas";
         return view('videoaula', ['titulo'=>$titulo, 'videos'=>$videos]);
     
-    }
+    } */
     public function videopost(){
         
         $titulo = "Postagem de videos";
         return view('videopost', ['titulo'=>$titulo]);
     
     }
-  public function postagens($id=null){
+  public function noticias($id=null){
       $titulo = "Página das Postagens";
-      return view('postagens', ['titulo'=>$titulo, 'id' => $id]);
+      return view('noticias', ['titulo'=>$titulo, 'id' => $id]);
  
   }
   public function store(Request $request){
-      $post = new Artigo;
+      $post = new Noticia;
 
       $post->title = $request->title;
-      $post->description = $request->description;
+      $post->subtitle = $request->subtitle;
+      $post->body = $request->body;
       $post->data_post = $request->data_post;
+    
+      $post->foto_desc = $request->foto_desc;
+
+      //uplod da foto(imagem)
+      if($request->hasFile('foto')&& $request->file('foto')->isValid()){
+          $requestImage = $request->foto;
+          $extension = $requestImage->extension();
+          $imageName = md5($requestImage->foto->getClientOriginalName().strtotime("now"));
+          $request->foto->move(public_path('img/fotos'));
+      }
 
       $post->save();
 
       return redirect('/');
   }
-  public function store_video(Request $request){
-    $post = new Videoaula;
+ /* public function store_video(Request $request){
+   // $post = new Videoaula;
 
     $post->title = $request->title;
     $post->url = $request->url;
@@ -78,6 +89,6 @@ class PaginasController extends Controller
 
     return redirect('videoaula');
 }
-
+*/
 
 }
