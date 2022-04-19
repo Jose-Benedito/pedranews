@@ -10,10 +10,11 @@ class PaginasController extends Controller
 {
     public function index() {
 
-        $noticias = Noticia::latest()->simplePaginate(3); // trazendo os últimos dados da TABELA Artigo;
+        $arts = Artigo:: latest()->simplePaginate(2);
+        $noticias = Noticia::latest()->simplePaginate(12); // trazendo os últimos dados da TABELA Artigo;
         $manchetes = Noticia::first()->simplePaginate(1);
         $titulo = "Pedra News";
-        return view('home', ['titulo'=>$titulo, 'noticias'=>$noticias, 'manchetes'=>$manchetes]);
+        return view('home', ['titulo'=>$titulo, 'noticias'=>$noticias, 'manchetes'=>$manchetes, 'arts'=>$arts]);
 
 
     }
@@ -52,18 +53,25 @@ class PaginasController extends Controller
         return view('videopost', ['titulo'=>$titulo]);
     
     }
-    public function noticia(){
+    public function manchete(){
         
       
         $titulo = "Postagem de videos";
-        return view('noticia', ['titulo'=>$titulo]);
+        return view('manchete', ['titulo'=>$titulo]);
     
     }
-  public function noticias($id=null){
-    $noticias = Noticia::select('select * from users where active = ?', [$id]);// trazendo os últimos dados da TABELA Artigo;
+  public function postagens($id=null){
+    $noticias = Noticia::all()->where('id', $id);// trazendo os últimos dados da TABELA Artigo;
        
       $titulo = "Página das Postagens";
-      return view('noticia', ['titulo'=>$titulo, 'noticias' => $noticias]);
+      return view('postagens', ['titulo'=>$titulo, 'noticias' => $noticias]);
+ 
+  }
+  public function artigos($id=null){
+    $arts = Artigo::all()->where('id', $id);// trazendo os últimos dados da TABELA Artigo;
+       
+      $titulo = "Artigos";
+      return view('artigos', ['titulo'=>$titulo, 'arts'=>$arts]);
  
   }
   public function store(Request $request){

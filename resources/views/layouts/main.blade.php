@@ -30,7 +30,7 @@
 
             </nav>
     <div class="container col-lg-10">
-                <div class="col-lg-2 py-5 logo">  <a href="noticia"><h1>PedraNews</h1></a></div>
+                <div class="col-lg-2 py-5 logo">  <a href="/"><h1>PedraNews</h1></a></div>
                 <ul class="nav justify-content-center ">
                     <li class="nav-item">
                 
@@ -43,7 +43,7 @@
                 <a class="nav-link" href="#">Contato</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
+                <a class="nav-link active" target="blank" href="https://www.facebook.com/ejardimpedrabranca/?ref=page_internal">Facebook</a>
             </li>
             </ul>
             

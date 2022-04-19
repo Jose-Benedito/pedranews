@@ -59,3 +59,12 @@ h1{
 .logo a{
   text-decoration:none;
 }
+.view-foto{
+  width:22rem; margin:20px;
+  left:5px;
+}
+.legenda{
+  color:#3d3d3d;
+  font-size: smaller;
+  padding: 15px;
+}
