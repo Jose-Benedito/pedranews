@@ -34,10 +34,13 @@
                 <ul class="nav justify-content-center ">
                     <li class="nav-item">
                 
-                <a class="nav-link active" href="/galeria">Galeria de fotos</a>
+                <a class="nav-link active" href="/galeria">Redação-fotos</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/artigos">Artigos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/podcasts">Podcasts</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/sobre">Sobre</a>

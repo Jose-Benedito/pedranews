@@ -45,7 +45,7 @@
             <div class="card aside" style="width:25rem ; margin-top:20px;">
               <div class="card-body">
                 <h4>Artigo:</h4>  
-           <!-- <img src="/image/escrita2.jpg" class="card-img-top" alt="escrita2"> -->
+           <img src="/image/foto.jpeg " class="card-img-top w-25 rounded-circle m-5" alt="escrita2"> 
             <a href="artigos/{{ $artigo->id }}" >  <h5 class="card-title text">{{ $artigo->title }}</h5>
                 <p class="card-title">{{ $artigo->resumo }}</p>
                 </div>

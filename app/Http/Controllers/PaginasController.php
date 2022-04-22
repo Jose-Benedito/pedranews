@@ -40,12 +40,12 @@ class PaginasController extends Controller
         $busca = request('search');
         return view('postagem', ['titulo'=>$titulo, 'busca'=>$busca]);
     }
-  /*  public function videoaula(){
-        $videos = Videoaula::latest()->paginate(10);
-        $titulo = "Videoaulas";
-        return view('videoaula', ['titulo'=>$titulo, 'videos'=>$videos]);
+    public function podcasts(){
+       $videos= ["podcast", "04/03"];
+        $titulo = "Podcasts";
+        return view('podcasts', ['titulo'=>$titulo, 'videos'=>$videos]);
     
-    } */
+    } 
     public function galeria(){
         
       
