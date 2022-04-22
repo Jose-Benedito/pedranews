@@ -23,24 +23,24 @@
     <div class="container-fluid ">
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark  justify-content-center">
-                <a class="navbar-brand" href="#">PedraNews</a>
+                <a class="navbar-brand" href="/">PedraNews</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
             </nav>
-    <div class="container col-lg-10">
+    <div class="container col-lg-10 col-sm-4">
                 <div class="col-lg-2 py-5 logo">  <a href="/"><h1>PedraNews</h1></a></div>
                 <ul class="nav justify-content-center ">
                     <li class="nav-item">
                 
-                <a class="nav-link active" href="#">Galeria de fotos</a>
+                <a class="nav-link active" href="/galeria">Galeria de fotos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Artigos</a>
+                <a class="nav-link" href="/artigos">Artigos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contato</a>
+                <a class="nav-link" href="/sobre">Sobre</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link active" target="blank" href="https://www.facebook.com/ejardimpedrabranca/?ref=page_internal">Facebook</a>
@@ -54,7 +54,7 @@
     </div>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-        <footer>
+        <footer class="footer">
             <p class="text-center">BENETHOWEN &copy; 2022</p>
         </footer>
 

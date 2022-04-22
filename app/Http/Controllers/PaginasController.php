@@ -46,11 +46,11 @@ class PaginasController extends Controller
         return view('videoaula', ['titulo'=>$titulo, 'videos'=>$videos]);
     
     } */
-    public function videopost(){
+    public function galeria(){
         
       
         $titulo = "Postagem de videos";
-        return view('videopost', ['titulo'=>$titulo]);
+        return view('galeria', ['titulo'=>$titulo]);
     
     }
     public function manchete(){
@@ -69,9 +69,9 @@ class PaginasController extends Controller
   }
   public function artigos($id=null){
     $arts = Artigo::all()->where('id', $id);// trazendo os últimos dados da TABELA Artigo;
-       
+    $artigos = Artigo:: latest()->simplePaginate(1); 
       $titulo = "Artigos";
-      return view('artigos', ['titulo'=>$titulo, 'arts'=>$arts]);
+      return view('artigos', ['titulo'=>$titulo, 'arts'=>$arts, 'artigos'=>$artigos]);
  
   }
   public function store(Request $request){

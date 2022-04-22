@@ -6,21 +6,29 @@
 
 {{-- Este é o a formar de comentar com Blade --}}
 
-        <h2>{{ $titulo }}</h2>
 
-<img src="/image/desktop-sobrenos.jpeg" class="d-block w-100" alt="escrita">
+<div class="container col-lg-10 col-sm-4">
+    
+    <img src="/image/desktop-sobrenos.jpeg" class="d-block w-100" alt="escrita">
 
 <!-- Postagens -->
-<div class="container">
     <img src="/image/foto.jpeg" alt="foto do autor" class="rounded-circle m-5">
   <div class="row">
   <div class="col-lg-12 col-md-4">
 
     <h6>Por: José Benedito Medeiros</h6>
     <h3>Benethowen</h3>
-    <p>Sou professor de Língua Portuguesa graduado em Letras, 
-        com pós em linguística e gramática na Universidade Nove de Julho.</p>
-    <p> Atuo na rede de ensino do Estado de São Paulo. Além de portuguẽs, sou licenciado em música pela Faculdade Integrada Cantareira.</p>
+    <p>PedraNews é uma iniciativa de professores da escola E.E.Jardim Pedra Branca
+        como estratégia pedagógica para desenvolver e envolver os alunos na produção escrita,
+        assim como outras habilidades adjacentes a essa atividade, como leitura, pesquisa, organização, 
+        colaboração e outras mais, necessárias para ler a realidade dos fatos
+        que os rodeiam e como são impactadados, absorvidos e resolvidos 
+        enquanto caminham em meio ao seu próprio processo de apredizado e
+        desenvolvimento da cidadania.
+    </p>
+    <p>Além de criar oportunidades para lidar com melhor destreza o suporte 
+        digital a qual a maioria dos textos circulam atualmente.
+    </p>
 
   </div>
   <div class="col-12 col-md-4 bg-secondary">

@@ -37,9 +37,10 @@ h1{
   margin-left:10px;
   padding: 8px;
 }
-.card-text{
+.card-title{
 
   padding-right: 20px;
+  color: #050505;
 }
 .nav {
   border-top: 2px solid #0f0f0c;
@@ -54,17 +55,23 @@ h1{
   text-decoration:none;
 }
 .card a:hover{
-  color:#e950b6;
+  color:#312f31;
 }
 .logo a{
   text-decoration:none;
 }
 .view-foto{
-  width:22rem; margin:20px;
-  left:5px;
+  width:80%;
+  /*height: 20rem ;
+   margin:20px;
+  left:5px; */
 }
+
 .legenda{
   color:#3d3d3d;
   font-size: smaller;
   padding: 15px;
+}
+.footer{
+  margin-top: 20px;
 }
