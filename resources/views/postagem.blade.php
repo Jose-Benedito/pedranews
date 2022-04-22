@@ -11,6 +11,8 @@
     <p>O Usuário está buscando por: {{ $busca }}</p>
 @endif
 <div class="col-md-6 offset-md-3">
+<!-- Formulário de notícias -->
+<h2 class="text-center m-5">Postagem de notícias</h2>
 <form action="/posts" method="POST" enctype="multipart/form-data">
     @csrf 
     <div class="form-group">
@@ -47,18 +49,55 @@
 
 </form>
 </div>
-<h2 class="text-center m-5">Postagem de videos</h2>
+<!-- Formulário de artigos -->
+<h2 class="text-center m-5">Postagem de artigos</h2>
+<div class="col-md-6 offset-md-3">
+<form action="/posts_art" method="POST">
+    @csrf 
+    <div class="form-group">
+        <label for="autor">Autor:</label>
+        <input type="text" class="form-control" id="autor" name="autor" placeholder="Nome do autor">
+
+    </div>
+    <div class="form-group">
+        <label for="title">Título:</label>
+        <input type="text" class="form-control" id="title" name="title" placeholder="Nome do título">
+
+    </div>
+    <div class="form-group">
+        <label for="resumo">Resumo:</label>
+        <textarea type="text" class="form-control" id="resumo" name="resumo" placeholder="primeiras linhas do artigo"></textarea>
+
+    </div>
+    <div class="form-group">
+        <label for="description">Descrição:</label>
+        <textarea type="text" class="form-control corpo" id="description" name="description" placeholder="Texto do artigo"></textarea>
+        
+    </div>
+    <div class="form-group">
+        <label for="data_post">Data da postagem:</label>
+        <input type="text" class="form-control" id="data_post" name="data_post" placeholder="Data da Postagem">
+        
+    </div>
+    <input type="submit" class="btn btn-primary" value="Salvar artigo">
+
+</form>
+</div>
+
+<!-- Formulário de fotos -->
+
+<h2 class="text-center m-5">Postagem de fotos</h2>
 <div class="col-md-6 offset-md-3">
 <form action="/videos" method="POST">
     @csrf 
     <div class="form-group">
         <label for="title">Título:</label>
-        <input type="text" class="form-control" id="title" name="title" placeholder="Nome do artigo">
+        <input type="text" class="form-control" id="title" name="title" placeholder="titulo da foto">
 
     </div>
     <div class="form-group">
-        <label for="url">Url:</label>
-        <input type="text" class="form-control" id="url" name="url" placeholder="Url do video">
+        <label for="image">Foto:</label>
+        <input type="file" class="form-control" id="image" name="image" >
 
     </div>
     <div class="form-group">
@@ -71,7 +110,7 @@
         <input type="text" class="form-control" id="data_post" name="data_post" placeholder="Data da Postagem">
         
     </div>
-    <input type="submit" class="btn btn-primary" value="Criar post">
+    <input type="submit" class="btn btn-primary" value="Salvar foto">
 
 </form>
 </div>

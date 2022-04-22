@@ -14,7 +14,7 @@ Route::get('/artigos/{id?}', [PaginasController::class, 'artigos']);
 Route::get('/podcasts', [PaginasController::class, 'podcasts']);
 Route::get('/galeria', [PaginasController::class, 'galeria']);
 Route::post('/posts', [PaginasController::class, 'store']);
-Route::post('/videos', [PaginasController::class, 'store_video']);
+Route::post('/posts_art', [PaginasController::class, 'store_artigo']);
 
 /*Route::get('/', function () {
     return view('sobre');

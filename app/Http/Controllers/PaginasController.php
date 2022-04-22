@@ -43,14 +43,15 @@ class PaginasController extends Controller
     public function podcasts(){
        $videos= ["podcast", "04/03"];
         $titulo = "Podcasts";
+        
         return view('podcasts', ['titulo'=>$titulo, 'videos'=>$videos]);
     
     } 
     public function galeria(){
         
-      
+        $slide=["slide1", "slide2", "slide3"];
         $titulo = "Postagem de videos";
-        return view('galeria', ['titulo'=>$titulo]);
+        return view('galeria', ['titulo'=>$titulo, 'slide'=>$slide]);
     
     }
     public function manchete(){
@@ -98,18 +99,19 @@ class PaginasController extends Controller
 
       return redirect('/');
   }
- /* public function store_video(Request $request){
-   // $post = new Videoaula;
+  public function store_artigo(Request $request){
+    $post = new Artigo;
 
+    $post->autor = $request->autor;
     $post->title = $request->title;
-    $post->url = $request->url;
+    $post->resumo = $request->resumo;
     $post->description = $request->description;
     $post->data_post = $request->data_post;
 
     $post->save();
 
-    return redirect('videoaula');
+    return redirect('artigos');
 }
-*/
+
 
 }

@@ -31,15 +31,7 @@
     </p>
 
   </div>
-  <div class="col-12 col-md-4 bg-secondary">
-    <h6>Postagens anteriores</h6>
-    <a href="#">Postagens 2</a>
-    <a href="#">Postagens 3</a>
-    <a href="#">Postagens 4</a>
-    <a href="#">Postagens 5>
-    <a href="#">Postagens 6</a>
-    <a href="#">Postagens 7</a>
-  </div>
+ 
 </div>
 </div>
  <!--    {{-- interações com diretivas do Blade --}}
