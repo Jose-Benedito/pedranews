@@ -5,16 +5,19 @@
 @section('content')
 <div class="container col-lg-10 col-sm-4">
 <div class="row">
+    
+<h2 class="text-center m-5">Redação</h2>
+        @foreach($slides as $slide )
 
-        @for($i=0; $i< 14; $i++)
-
-        <div class="col-lg-3 w-50 ">
+        <div class="col-lg-3 ">
             <figure class="figure">
-            <img src="/image/slide1.jpg" style="height: 200px;" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-            <figcaption class="figure-caption">A caption for the above image.</figcaption>
+            <img src="/storage/{{ $slide->image }}" style="height: 200px;" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            <figcaption class="figure-caption">{{ $slide->description }}</figcaption>
             </figure>
         </div>
-        @endfor
+        @endforeach
+
+        {{ $slides->links()}}
 </div>
 </div>
 

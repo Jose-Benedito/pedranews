@@ -88,7 +88,7 @@
 
 <h2 class="text-center m-5">Postagem de fotos</h2>
 <div class="col-md-6 offset-md-3">
-<form action="/videos" method="POST">
+<form action="/posts_foto" method="POST" enctype="multipart/form-data">
     @csrf 
     <div class="form-group">
         <label for="title">Título:</label>
@@ -102,7 +102,43 @@
     </div>
     <div class="form-group">
         <label for="description">Descrição:</label>
-        <textarea type="text" class="form-control" id="description" name="description" placeholder="Texto do artigo"></textarea>
+        <textarea type="text" class="form-control" id="description" name="description" placeholder="Breve descrição"></textarea>
+        
+    </div>
+    <div class="form-group">
+        <label for="data_post">Data da postagem:</label>
+        <input type="text" class="form-control" id="data_post" name="data_post" placeholder="Data da Postagem">
+        
+    </div>
+    <input type="submit" class="btn btn-primary" value="Salvar foto">
+
+</form>
+</div>
+
+<!-- Formulário de Podcasts -->
+
+<h2 class="text-center m-5">Postagem de podcasts</h2>
+<div class="col-md-6 offset-md-3">
+<form action="/posts_podcasts" method="POST" enctype="multipart/form-data">
+    @csrf 
+    <div class="form-group">
+        <label for="title">Título:</label>
+        <input type="text" class="form-control" id="title" name="title" placeholder="titulo da foto">
+
+    </div>
+    <div class="form-group">
+        <label for="autor">Autor:</label>
+        <input type="text" class="form-control" id="autor" name="autor" placeholder="Nome do autor" >
+
+    </div>
+    <div class="form-group">
+        <label for="audio">Áudio:</label>
+        <input type="file" class="form-control" id="audio" name="audio" >
+
+    </div>
+    <div class="form-group">
+        <label for="description">Descrição:</label>
+        <textarea type="text" class="form-control" id="description" name="description" placeholder="Breve descrição"></textarea>
         
     </div>
     <div class="form-group">

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Artigo; //carregando o model de artigo
 use App\Models\Noticia; //carregando a model de Videoaula
+use App\Models\Foto; //carregando a model de fotos
+use App\Models\Podcast; //carregando a model de podcasts
 class PaginasController extends Controller
 
 {
@@ -41,17 +43,23 @@ class PaginasController extends Controller
         return view('postagem', ['titulo'=>$titulo, 'busca'=>$busca]);
     }
     public function podcasts(){
-       $videos= ["podcast", "04/03"];
+       $videos= "Canção Modal";
+       $autor = "José Benedito Medeiros";
+       $data = "Sexta 22 abril de 2022";
         $titulo = "Podcasts";
         
-        return view('podcasts', ['titulo'=>$titulo, 'videos'=>$videos]);
+        return view('podcasts', ['titulo'=>$titulo, 
+        'videos'=>$videos,
+        'autor'=>$autor,
+        'data'=>$data
+        ]);
     
     } 
     public function galeria(){
+        $slides = Foto::latest()->simplePaginate(12);
         
-        $slide=["slide1", "slide2", "slide3"];
         $titulo = "Postagem de videos";
-        return view('galeria', ['titulo'=>$titulo, 'slide'=>$slide]);
+        return view('galeria', ['titulo'=>$titulo, 'slides'=>$slides]);
     
     }
     public function manchete(){
@@ -111,6 +119,47 @@ class PaginasController extends Controller
     $post->save();
 
     return redirect('artigos');
+}
+public function store_foto(Request $request){
+    $post = new Foto;
+
+    $post->title = $request->title;
+    if($request->hasFile('image')&& $request->file('image')->isValid()){
+
+       $imagePath = $request->image->store('galeria', 'public');
+
+       $post->image = $imagePath; 
+    }
+    $post->description = $request->description;
+    $post->data_post = $request->data_post;
+    
+      
+
+
+         $post->save();
+
+    return redirect('/');
+}
+public function store_podcasts(Request $request){
+$post = new Podcast;
+
+$post->title = $request->title;
+$post->autor = $request->autor;
+if($request->hasFile('audio')&& $request->file('audio')->isValid()){
+
+   $imagePath = $request->audio->store('audio', 'public');
+
+   $post->audio = $imagePath; 
+}
+$post->description = $request->description;
+$post->data_post = $request->data_post;
+
+  
+
+
+     $post->save();
+
+return redirect('podcasts');
 }
 
 
