@@ -8,18 +8,19 @@
     <img src="/image/slide3.jpg" class="d-block w-100 mb-5" alt="slide3.jpg">
     <div class="container">
      <div class="row"> 
-     
-       <h2 class="text-left">{{ $videos }}</h2>
-       <h3>Compositor:{{ $autor }}</h3>
+     @foreach($audio as $mp3)
+       <h2 class="text-left">{{ $mp3->title }}</h2>
+       <h3>Compositor:{{ $mp3->autor }}</h3>
        <div class="col-lg-8 col-md-4">
 
           <audio autoplay controls>
-            <source src="/media/modal01.mp3"  type="audio/mpeg">
+            <source src="/storage/{{ $mp3->audio }}"  type="audio/mpeg">
          
           </audio>
-          <p>Postado: {{ $data }}</p>
+          <p>{{ $mp3->description }}</p>
+          <p>Postado: {{ $mp3->data_post }}</p>
       </div>
-        
+      @endforeach 
         
     </div>
   

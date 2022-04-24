@@ -43,16 +43,10 @@ class PaginasController extends Controller
         return view('postagem', ['titulo'=>$titulo, 'busca'=>$busca]);
     }
     public function podcasts(){
-       $videos= "Canção Modal";
-       $autor = "José Benedito Medeiros";
-       $data = "Sexta 22 abril de 2022";
+       
+        $audio = Podcast:: latest()->simplePaginate(2);
         $titulo = "Podcasts";
-        
-        return view('podcasts', ['titulo'=>$titulo, 
-        'videos'=>$videos,
-        'autor'=>$autor,
-        'data'=>$data
-        ]);
+        return view('podcasts', ['titulo'=>$titulo, 'audio'=>$audio]);
     
     } 
     public function galeria(){
